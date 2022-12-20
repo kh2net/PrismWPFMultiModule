@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <BaseOutputPath>..\bin\Application\</BaseOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Page Remove="ModulesCatalog.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="1.2.0" />
+    <PackageReference Include="Dragablz" Version="0.0.3.234" />
+    <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+    <PackageReference Include="ServiceLocation" Version="1.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Module1\Module1.csproj" />
+    <ProjectReference Include="..\..\Module2\Module2.csproj" />
+    <ProjectReference Include="..\FullApp1.Core\FullApp1.Core.csproj" />
+	  <ProjectReference Include="..\Modules\FullApp1.Modules.ModuleName\FullApp1.Modules.ModuleName.csproj" />
+    <ProjectReference Include="..\Services\FullApp1.Services.Interfaces\FullApp1.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Services\FullApp1.Services\FullApp1.Services.csproj" />
+  </ItemGroup>
+</Project>
