@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Module1\Module1.csproj" />
     <ProjectReference Include="..\..\Module2\Module2.csproj" />
+    <ProjectReference Include="..\..\WpfLibrary1\WpfLibrary1.csproj" />
     <ProjectReference Include="..\FullApp1.Core\FullApp1.Core.csproj" />
 	  <ProjectReference Include="..\Modules\FullApp1.Modules.ModuleName\FullApp1.Modules.ModuleName.csproj" />
     <ProjectReference Include="..\Services\FullApp1.Services.Interfaces\FullApp1.Services.Interfaces.csproj" />

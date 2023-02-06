@@ -12,5 +12,8 @@
         <TextBlock Text="{Binding Title}"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center" />
+
+
+        <Label Content="AGAGGAGAGAG"></Label>
     </Grid>
 </UserControl>

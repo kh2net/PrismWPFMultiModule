@@ -1,33 +1,34 @@
 ﻿using FullApp1.Core;
-using Module1;
-using Module1.ViewModels;
-using Module2.ViewModels;
-using Module2.Views;
+using Module3;
+using Module3.ViewModels;
+using Module3.ViewModels;
+using Module3.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Regions;
 using System;
+using System.Reflection;
+using WpfLibrary1.Views;
 
-namespace Module2
+namespace Module3
 {
-    public class Module2Module : IModule
+    public class Module3Module : IModule
     {
-        public Module2Module(IRegionManager regionManager)
+        public Module3Module(IRegionManager regionManager)
         {
             _regionManager = regionManager ?? throw new ArgumentNullException(nameof(regionManager));
         }
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            _regionManager.RegisterViewWithRegion<TabHeaderModule2UserControl>(RegionNames.TabRegionName);
+            _regionManager.RegisterViewWithRegion<TabHeaderModule3UserControl>(RegionNames.TabRegionName);
 
         }
         private readonly IRegionManager _regionManager;
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            ViewModelLocationProvider.Register<TabHeaderModule2UserControl, TabHeaderModule2ViewModel>();
-            containerRegistry.RegisterForNavigation<ViewB>(nameof(ViewBViewModel));
+            ViewModelLocationProvider.Register<TabHeaderModule3UserControl, TabHeaderModule3ViewModel>();
             containerRegistry.RegisterForNavigation<ViewC>(nameof(ViewCViewModel));
         }
     }

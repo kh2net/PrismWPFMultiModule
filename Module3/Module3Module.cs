@@ -8,12 +8,13 @@ using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Regions;
 using System;
+using System.Reflection;
 
-namespace Module2
+namespace Module3
 {
-    public class Module2Module : IModule
+    public class Module3Module : IModule
     {
-        public Module2Module(IRegionManager regionManager)
+        public Module3Module(IRegionManager regionManager)
         {
             _regionManager = regionManager ?? throw new ArgumentNullException(nameof(regionManager));
         }
@@ -26,8 +27,7 @@ namespace Module2
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            ViewModelLocationProvider.Register<TabHeaderModule2UserControl, TabHeaderModule2ViewModel>();
-            containerRegistry.RegisterForNavigation<ViewB>(nameof(ViewBViewModel));
+            ViewModelLocationProvider.Register<TabHeaderModule2UserControl, TabHeaderModule3ViewModel>();
             containerRegistry.RegisterForNavigation<ViewC>(nameof(ViewCViewModel));
         }
     }

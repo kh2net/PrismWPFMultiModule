@@ -1,0 +1,10 @@
+﻿<MenuItem x:Class="WpfLibrary1.Views.TabHeaderModule3UserControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Header="View3-Menu"      xmlns:local="clr-namespace:WpfLibrary1.Views"
+        mc:Ignorable="d"
+     >
+    <MenuItem Command="{Binding OpenView1Command}" Header="view3" />
+</MenuItem>

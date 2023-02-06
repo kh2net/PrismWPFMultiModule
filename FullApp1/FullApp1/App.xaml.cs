@@ -5,6 +5,7 @@ using FullApp1.Services.Interfaces;
 using FullApp1.Views;
 using Module1;
 using Module2;
+using Module3;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
@@ -35,6 +36,7 @@ namespace FullApp1
             moduleCatalog.AddModule<ModuleNameModule>();
             moduleCatalog.AddModule<Module1Module>();
             moduleCatalog.AddModule<Module2Module>();
+            moduleCatalog.AddModule<Module3Module>();
         }
 
         protected override IModuleCatalog CreateModuleCatalog()
